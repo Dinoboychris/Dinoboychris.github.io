@@ -11,12 +11,17 @@
     <nav>
         <div class="nav-container">
             <a href="index.html" class="transition"><div class="logo">Shadows of Calverak</div></a>
-            <div class="nav-links">
-                <a href="guard.html">Guards</a>
-                <a href="gnawbone.html">Gnawbone Syndicate</a>
-                <a href="cinderhand.html">Cinderhands</a>
-                <a href="mirror.html">Veiled Mirror</a>
-            </div>
+                <div class="dropdown" id="dropdownMenu">
+                    <button class="menu-button" id="menuButton">
+                        Menu ▼
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="guard.html">Guards</a>
+                        <a href="gnawbone.html">Gnawbone Syndicate</a>
+                        <a href="cinderhand.html">Cinderhands</a>
+                        <a href="mirror.html">Veiled Mirror</a>
+                    </div>
+                </div>
         </div>
     </nav>
 
@@ -53,5 +58,28 @@
             </div>
         </div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.getElementById('dropdownMenu');
+            const menuButton = document.getElementById('menuButton');
+            
+            menuButton.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent immediate document click
+                dropdown.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking anywhere else
+            document.addEventListener('click', function() {
+                dropdown.classList.remove('active');
+            });
+            
+            // Prevent dropdown from closing when clicking inside it
+            dropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+
 </body>
 </html>
