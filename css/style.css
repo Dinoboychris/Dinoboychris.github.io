@@ -160,9 +160,15 @@ main {
 }
 
 /* Level colors */
-.level-1 .node { background-color: #B8860B; }
+.level-0 .node { background-color: rgb(13 60 87 / 0.8); }
+.level-1 .node { background-color: #997000; }
 .level-2 .node { background-color: #4B4B4B; }
 .level-3 .node { background-color: #A42D2D; }
+
+.level-0 .node:hover { background-color: rgb(10 46 67 / 0.8); }
+.level-1 .node:hover { background-color: #805e00; }
+.level-2 .node:hover { background-color: #404040; }
+.level-3 .node:hover { background-color: #8c2626; }
 
 a {
     text-decoration: none; 
@@ -172,4 +178,13 @@ a {
 
 a.transition:hover {
     color: #600000;
+}
+
+
+body.welcome 
+{
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
