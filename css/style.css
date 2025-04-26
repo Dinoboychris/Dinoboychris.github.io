@@ -132,6 +132,14 @@ main {
     text-align: center;
     width: 100%;
 }
+.level-title-alt {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+}
 
 .level {
     display: flex;
@@ -161,6 +169,7 @@ main {
 
 /* Level colors */
 .level-0 .node { background-color: rgb(13 60 87 / 0.8); }
+.level-4 .node { background-color: rgb(75 75 75 / 0.8); }
 .level-1 .node { background-color: #997000; }
 .level-2 .node { background-color: #4B4B4B; }
 .level-3 .node { background-color: #A42D2D; }
